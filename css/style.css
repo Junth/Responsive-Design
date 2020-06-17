@@ -78,15 +78,17 @@ main {
   border-color: transparent;
 }
 
+/*intro*/
 .intro {
   background-color: #ffffff;
   padding: 15vh 0;
 }
 
 .intro-content {
-  height: 50vh;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 20px;
 }
 
 .intro-content div {
@@ -99,11 +101,12 @@ main {
   line-height: 40px;
 }
 
+/*services*/
 .services {
   background-color: #f1c11a;
-  height: 50vh;
+  height: auto;
   clip-path: polygon(0 0, 15% 0, 50% 20%, 85% 0, 100% 0, 100% 100%, 0 100%, 0 0);
-  margin-top: -15vh;
+  margin-top: -25vh;
 }
 
 .service-content {
@@ -123,6 +126,7 @@ main {
   line-height: 25px;
 }
 
+/*contact form*/
 .contact {
   background-color: #ffffff;
   padding: 10vh 0;
@@ -152,6 +156,7 @@ textarea {
   color: #000000;
 }
 
+/*footer*/
 footer {
   background-color: #f1c11a;
   clip-path: polygon(0 0, 15% 0, 50% 20%, 85% 0, 100% 0, 100% 100%, 0 100%, 0 0);
@@ -161,14 +166,17 @@ footer {
   padding-bottom: 30px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
+
+  /*head*/
   .header-content h2 {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .intro-content {
     display: block;
-    height: 90vh;
+    height: auto;
+    padding-bottom: 150px;
   }
 
   .intro-content div {
@@ -176,7 +184,7 @@ footer {
   }
 
   .services {
-    height: 100vh;
+    height: 70vh;
     clip-path: polygon(0 0, 15% 0, 50% 5%, 85% 0, 100% 0, 100% 100%, 0 100%, 0 0);
   }
 
@@ -189,5 +197,157 @@ footer {
   .bucket {
     width: 100%;
     margin: 80px 3%;
+  }
+
+  /*contact form*/
+  .contact {
+    background-color: #ffffff;
+    padding: 5vh 0;
+    text-align: center;
+  }
+
+  input[type='text'],
+  input[type=email],
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border-color: 1px solid #cccccc;
+  }
+
+  footer {
+    margin-bottom: 0;
+    height: 20px;
+    margin-top: -3vh;
+    padding-top: 35px;
+    text-align: center;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .intro-content {
+    height: auto;
+  }
+
+  .services {
+    height: auto;
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+
+  /*head*/
+  main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .header {
+    height: 75vh;
+    line-height: 40px;
+  }
+
+  .header-content {
+    padding-top: 28vh;
+  }
+
+  .header-content h1,
+  .intro-content h1,
+  .contact-section h1,
+  .bucket h1 {
+    font-size: 20px;
+  }
+
+  .header-content h2 span,
+  header-content h2,
+  .bucket h2 {
+    font-size: 14px;
+    line-height: 3px;
+  }
+
+  .btn {
+    padding: 5px 15px;
+    margin-top: 10vh;
+    margin-right: 10px;
+  }
+
+  /*head end*/
+  /*intro start*/
+  .intro {
+    padding: 5vh 0 10vh 0;
+  }
+
+  .intro-content {
+    height: auto;
+    display: block;
+  }
+
+  .intro-content div {
+    padding-top: 10px;
+    width: 100%;
+  }
+
+  .intro-text p {
+    text-align: justify;
+    padding-top: 10px;
+    line-height: 20px;
+  }
+
+  /*intro end*/
+  /*service*/
+  .services {
+    height: auto;
+  }
+
+  .service-content {
+    margin-top: -5vh;
+    padding-top: 40px;
+  }
+
+  .bucket {
+    width: 90%;
+    margin: 10px 3%;
+    margin-top: 20px;
+  }
+
+  .bucket p {
+    padding-top: 2px;
+  }
+
+  /*contact form*/
+  .contact {
+    padding: 5vh 0;
+  }
+
+  input[type='text'],
+  input[type=email],
+  textarea {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .contact-section div {
+    padding: 5px 3%;
+  }
+
+  .contact-section .btn-submit {
+    margin-top: 0px;
+  }
+
+  /*footer*/
+  footer {
+    margin-bottom: 0;
+    height: 10px;
+    margin-top: -2vh;
+    padding-top: 15px;
+    text-align: center;
   }
 }
